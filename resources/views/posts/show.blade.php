@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="row">
-        <h1>{{ $post->title }}</h1>
+        <h3 class="text-md">{{ $post->title }}</h3>
         <hr>
         <p>{{ $post->content }}</p>
         <hr>
-        <h3>Comments</h3>
+        <h3 class="text-md">Comments</h3>
         <ul>
             @foreach ($post->comments as $comment)
                 <li>{{ $comment->content }}</li>
@@ -22,7 +22,7 @@
             <div class="form-group">
                 <textarea name="content" class="form-control" placeholder="Enter your comment"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
         </form>
     </div>
 
